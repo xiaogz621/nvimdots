@@ -2,7 +2,7 @@ local settings = {}
 
 -- Set it to false if you want to use https to update plugins and treesitter parsers.
 ---@type boolean
-settings["use_ssh"] = true
+settings["use_ssh"] = false
 
 -- Set it to false if you don't use copilot
 ---@type boolean
@@ -113,8 +113,8 @@ settings["lsp_deps"] = {
 	"html",
 	"jsonls",
 	"lua_ls",
-	"pylsp",
-	"gopls",
+	"pyright",
+	--	"gopls",
 }
 
 -- Set the general-purpose servers that will be installed during bootstrap here.
@@ -124,8 +124,8 @@ settings["lsp_deps"] = {
 ---@type string[]
 settings["null_ls_deps"] = {
 	"clang_format",
-	"gofumpt",
-	"goimports",
+	--	"gofumpt",
+	--	"goimports",
 	"prettier",
 	"shfmt",
 	"stylua",
