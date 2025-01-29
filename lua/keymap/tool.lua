@@ -9,7 +9,7 @@ require("keymap.helpers")
 local mappings = {
 	plugins = {
 		-- Plugin: edgy
-		["n|<C-n>"] = map_callback(function()
+		["n|,d"] = map_callback(function()
 				require("edgy").toggle("left")
 			end)
 			:with_noremap()
@@ -117,6 +117,12 @@ local mappings = {
 			:with_noremap()
 			:with_silent()
 			:with_desc("tool: Find files"),
+		["n|<leader>b"] = map_callback(function()
+				require("search").open({ collection = "buff" })
+			end)
+			:with_noremap()
+			:with_silent()
+			:with_desc("tool: Find buffers"),
 		["n|<leader>fp"] = map_callback(function()
 				require("search").open({ collection = "pattern" })
 			end)
@@ -126,6 +132,13 @@ local mappings = {
 		["v|<leader>fs"] = map_callback(function()
 				local opts = vim.fn.getcwd() == vim_path and { additional_args = { "--no-ignore" } } or {}
 				require("telescope-live-grep-args.shortcuts").grep_visual_selection(opts)
+			end)
+			:with_noremap()
+			:with_silent()
+			:with_desc("tool: Find word under cursor"),
+		["n|,g"] = map_callback(function()
+				local opts = vim.fn.getcwd() == vim_path and { additional_args = { "--no-ignore" } } or {}
+				require("telescope-live-grep-args.shortcuts").grep_word_under_cursor(opts)
 			end)
 			:with_noremap()
 			:with_silent()
@@ -210,6 +223,24 @@ local mappings = {
 			:with_noremap()
 			:with_silent()
 			:with_desc("debug: Open REPL"),
+
+		["n|<leader>sw"] = map_callback(function()
+				vim.cmd([[
+			  set wrap
+			]])
+			end)
+			:with_noremap()
+			:with_silent()
+			:with_desc("set wrap"),
+
+		["n|<leader>sn"] = map_callback(function()
+				vim.cmd([[
+			  set nowrap
+			]])
+			end)
+			:with_noremap()
+			:with_silent()
+			:with_desc("set nowrap"),
 	},
 }
 

@@ -42,6 +42,18 @@ return function()
 					},
 				},
 			},
+			-- Search buffers using filenames
+			buff = {
+				initial_tab = 1,
+				tabs = {
+					{
+						name = "Buffers",
+						tele_func = function()
+							builtin.buffers()
+						end,
+					},
+				},
+			},
 			-- Search using patterns
 			pattern = {
 				initial_tab = 1,
