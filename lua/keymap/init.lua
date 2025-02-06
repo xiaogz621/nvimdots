@@ -48,3 +48,8 @@ local ok, def = pcall(require, "user.keymap.init")
 if ok then
 	require("modules.utils.keymap").replace(def)
 end
+
+vim.api.nvim_set_keymap("t", "<C-j>", "<C-\\><C-n><C-w><C-j><CR>", { noremap = true })
+vim.api.nvim_set_keymap("t", "<C-k>", "<C-\\><C-n><C-w><C-k><CR>", { noremap = true })
+vim.api.nvim_set_keymap("t", "<C-h>", "<C-\\><C-n><C-w><C-h><CR>", { noremap = true })
+vim.api.nvim_set_keymap("t", "<C-l>", "<C-\\><C-n><C-w><C-l><CR>", { noremap = true })

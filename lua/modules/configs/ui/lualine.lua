@@ -161,6 +161,15 @@ return function()
 			cond = conditionals.has_comp_before,
 		},
 
+		file_name = {
+			function()
+				local filename = vim.fn.expand("%:p")
+				return filename
+			end,
+			padding = { left = 0, right = 1 },
+			cond = conditionals.has_comp_before,
+		},
+
 		lsp = {
 			function()
 				local buf_ft = vim.bo.filetype
@@ -258,7 +267,8 @@ return function()
 			section_separators = { left = "", right = "" },
 		},
 		sections = {
-			lualine_a = { "mode" },
+			--lualine_a = { "mode" },
+			lualine_a = { components.file_name },
 			lualine_b = {
 				{
 					"filetype",

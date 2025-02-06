@@ -4,6 +4,7 @@ return function()
 
 	require("modules.utils").load_plugin("telescope", {
 		defaults = {
+			wrap_results = true,
 			vimgrep_arguments = {
 				"rg",
 				"--no-heading",
@@ -45,7 +46,7 @@ return function()
 		},
 		extensions = {
 			fzf = {
-				fuzzy = false,
+				fuzzy = true,
 				override_generic_sorter = true,
 				override_file_sorter = true,
 				case_mode = "smart_case",
