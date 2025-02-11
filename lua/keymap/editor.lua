@@ -49,7 +49,7 @@ local mappings = {
 			:with_noremap()
 			:with_silent()
 			:with_desc("edit: Clear search highlight"),
-		["n|<leader>o"] = map_cr("setlocal spell! spelllang=en_us"):with_desc("edit: Toggle spell check"),
+		["n|<leader>so"] = map_cr("setlocal spell! spelllang=en_us"):with_desc("edit: Toggle spell check"),
 
 		-- Builtins: Lsp
 		["n|<leader>td"] = map_callback(function()
@@ -106,8 +106,8 @@ local mappings = {
 			:with_desc("edit: Toggle comment for block with selection"),
 
 		-- Plugin: diffview.nvim
-		["n|<leader>gd"] = map_cr("DiffviewOpen"):with_silent():with_noremap():with_desc("git: Show diff"),
-		["n|<leader>gD"] = map_cr("DiffviewClose"):with_silent():with_noremap():with_desc("git: Close diff"),
+		["n|<leader>hd"] = map_cr("DiffviewOpen"):with_silent():with_noremap():with_desc("git: Show diff"),
+		["n|<leader>hD"] = map_cr("DiffviewClose"):with_silent():with_noremap():with_desc("git: Close diff"),
 
 		-- Plugin: hop.nvim
 		["nv|<leader>w"] = map_cmd("<Cmd>HopWordMW<CR>"):with_noremap():with_desc("jump: Goto word"),

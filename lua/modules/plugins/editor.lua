@@ -131,7 +131,7 @@ editor["Thiago4532/mdmath.nvim"] = {
 	},
 	opts = {
 		-- Filetypes that the plugin will be enabled by default.
-		filetypes = { "markdown" },
+		filetypes = { "markdown", "h", "cpp", "H", "CPP", "c", "C" },
 		-- Color of the equation, can be a highlight group or a hex color.
 		-- Examples: 'Normal', '#ff0000'
 		foreground = "Normal",

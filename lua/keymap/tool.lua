@@ -129,7 +129,7 @@ local mappings = {
 			:with_noremap()
 			:with_silent()
 			:with_desc("tool: Find patterns"),
-		["v|<leader>fs"] = map_callback(function()
+		["v|,g"] = map_callback(function()
 				local opts = vim.fn.getcwd() == vim_path and { additional_args = { "--no-ignore" } } or {}
 				require("telescope-live-grep-args.shortcuts").grep_visual_selection(opts)
 			end)
