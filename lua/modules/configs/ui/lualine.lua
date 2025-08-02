@@ -268,7 +268,12 @@ return function()
 		},
 		sections = {
 			--lualine_a = { "mode" },
-			lualine_a = { components.file_name },
+			lualine_a = {				
+				{
+					"filename",
+					color={bg='green'},
+				},
+			},
 			lualine_b = {
 				{
 					"filetype",
@@ -345,9 +350,14 @@ return function()
 			lualine_z = { components.file_location },
 		},
 		inactive_sections = {
-			lualine_a = {},
+			lualine_a = {				
+				{
+					"filename",
+					color={bg='green'},
+				},
+			},
 			lualine_b = {},
-			lualine_c = { "filename" },
+			lualine_c = {},
 			lualine_x = { "location" },
 			lualine_y = {},
 			lualine_z = {},

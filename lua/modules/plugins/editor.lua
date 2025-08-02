@@ -138,7 +138,7 @@ editor["Thiago4532/mdmath.nvim"] = {
 		-- Hide the text when the equation is under the cursor.
 		anticonceal = true,
 		-- Hide the text when in the Insert Mode.
-		hide_on_insert = true,
+		hide_on_insert = false,
 		-- Enable dynamic size for non-inline equations.
 		dynamic = true,
 		-- Configure the scale of dynamic-rendered equations.
