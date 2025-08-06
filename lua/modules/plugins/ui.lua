@@ -67,10 +67,10 @@ ui["folke/todo-comments.nvim"] = {
 	config = require("ui.todo"),
 	dependencies = { "nvim-lua/plenary.nvim" },
 }
-ui["dstein64/nvim-scrollview"] = {
-	lazy = true,
-	event = { "BufReadPost", "BufAdd", "BufNewFile" },
-	config = require("ui.scrollview"),
-}
+--ui["dstein64/nvim-scrollview"] = {
+--	lazy = true,
+--	event = { "BufReadPost", "BufAdd", "BufNewFile" },
+--	config = require("ui.scrollview"),
+--}
 
 return ui
